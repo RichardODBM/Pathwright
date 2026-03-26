@@ -1,0 +1,59 @@
+<script>
+var refTagger = {
+  settings: {
+    bibleVersion: 'NIV'
+  }
+}; 
+
+(function(d, t) {
+  var n=d.querySelector('[nonce]');
+  refTagger.settings.nonce = n && (n.nonce||n.getAttribute('nonce'));
+  var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  g.src = 'https://api.reftagger.com/v2/RefTagger.js';
+  g.nonce = refTagger.settings.nonce;
+  s.parentNode.insertBefore(g, s);
+}(document, 'script'));
+</script>
+
+<script>
+	var refTagger = {
+		settings: {
+			bibleReader: "bible.faithlife",
+			bibleVersion: "NIV",			
+			socialSharing: ["twitter","facebook","google"],
+			customStyle : {
+				heading: {
+					backgroundColor : "#497D66",
+					color : "#ffffff"
+				},
+				body   : {
+					color : "#000000"
+				}
+			}
+		}
+	};
+	(function(d, t) {
+		var n=d.querySelector("[nonce]");
+		refTagger.settings.nonce = n && (n.nonce||n.getAttribute("nonce"));
+		var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+		g.src = "https://api.reftagger.com/v2/RefTagger.js";
+		g.nonce = refTagger.settings.nonce;
+		s.parentNode.insertBefore(g, s);
+	}(document, "script"));
+</script>
+
+
+<!-- Call refTagger.tag when step content is rendered in view mode. -->
+<script>
+  document.addEventListener("step:content:view:rendered", function () {
+    try {
+      window.refTagger && window.refTagger.tag()
+    } catch (error) {
+      // Silently fail as Reftagger is likely throwing an
+      // error due to there being no refs to tag.
+    }
+  })
+</script>
+
+<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=mudz2kb5csfrwrd7et0hpa" async="true"></script>
+
