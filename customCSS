@@ -1,0 +1,23 @@
+h1 {
+    font-family: "Gilroy-ExtraBold";
+    font-size: 48px;
+}
+
+h2 {
+    font-family: "Gilroy-ExtraBold";
+    font-size: 35px;
+}
+
+.PathGroupDetails__title h3 {
+    font-family: "Gilroy-ExtraBold";
+    font-size: 28px;
+}
+
+.PathGroupDetails__description div {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-size: 24px;
+}
+
+p { font-family: 'Tw Cen MT Std', sans-serif; }
+ol { list-style-type: decimal; font-family: 'Tw Cen MT Std', sans-serif; }
+ul { list-style-type: circle; font-family: 'Tw Cen MT Std', sans-serif; }
